@@ -6,3 +6,5 @@ TO DO:
 
 - Deploy to github pages
 - Good picture in portfolio.md
+- Minutes to read
+- Make the blog dynamic
