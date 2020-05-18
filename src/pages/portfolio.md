@@ -10,6 +10,7 @@ path: "/portfolio"
 
 <!-- # Ahmed Rafayat &ndash; Software Engineer -->
 
+
 ## About me
 
 - 2+ years of experience as a software engineer
@@ -71,9 +72,19 @@ _January 2019 &ndash; November 2019_
 ## Personal & Freelance Projects
 
 **Pluspoint Retail Website** | [pluspointfashion.com](https://www.pluspointfashion.com/)  
-_December 2019 &ndash; January 2020_
+_2020_ | React, Redux, SEO, SSR
+Retail and e-commerce site built with React and Redux on the frontend and a PHP backend. Worked for 2 months under contract as the sole React developer.
 
--
+**PANPACIFIC PROPERTIES** | [panpacificproperties.com.bd](https://panpacificproperties.com.bd/)  
+_2020_
+A responsive, SEO optimized and mobile friendly website for a real estate startup. Freelanced from home.
+
+**EDUHIVE** | [Download from Google Play](https://shorturl.at/nERY5)  
+_December 2019 &ndash; January 2020_
+An e-learning app for bangladeshi students. It is available in the app store for both iOS and Android.
+
+
+
 
 &nbsp;
 
