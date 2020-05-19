@@ -12,6 +12,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     excerpt: autoExcerpt,
     id,
     html,
+    fields
   } = data.markdownRemark;
   const { next, previous } = pageContext;
 
@@ -29,6 +30,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         tags={tags}
         previousPost={previous}
         nextPost={next}
+        readingTime={fields.readingTime.text}
       />
     </Layout>
   );
@@ -65,6 +67,11 @@ export const pageQuery = graphql`
       id
       html
       excerpt
+      fields {
+        readingTime {
+          text
+        }
+      }
     }
   }
 `;
