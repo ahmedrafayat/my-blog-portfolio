@@ -28,6 +28,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               excerpt,
               tags,
             },
+            fields,
           } = node;
 
           return (
@@ -40,6 +41,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               coverImage={coverImage}
               tags={tags}
               excerpt={excerpt || autoExcerpt}
+              readingTime={fields.readingTime.text}
             />
           );
         })}
@@ -66,7 +68,7 @@ Index.propTypes = {
 export const postsQuery = graphql`
   query($limit: Int!, $skip: Int!) {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//posts//" } }
+      filter: {frontmatter: {path: {regex: "/blog/"}}, fileAbsolutePath: {regex: "//posts//"}}
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
       skip: $skip
@@ -75,6 +77,11 @@ export const postsQuery = graphql`
         node {
           id
           excerpt
+          fields {
+            readingTime {
+              text
+            }
+          }
           frontmatter {
             title
             date(formatString: "DD MMMM YYYY")

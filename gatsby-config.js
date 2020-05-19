@@ -31,7 +31,7 @@ module.exports = {
       // },
       {
         title: "Blog",
-        path: "/showcase",
+        path: "/",
       },
       {
         title: "Resume",
@@ -119,6 +119,7 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
+          `gatsby-remark-reading-time`,
         ],
       },
     },
