@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         title: "Resume",
-        path: "/portfolio",
+        path: "/resume",
       },
     ],
   },

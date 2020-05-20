@@ -2,14 +2,14 @@
 title: "Ahmed Rafayat - Software Engineer"
 date: "2020-05-17"
 author: "Ahmed Rafayat"
-path: "/portfolio"
+path: "/resume"
 ---
 
 > [ahmed.rafayat97@gmail.com](mailto:ahmed.rafayat97@gmail.com) |
 > [+8801954916806](tel:+8801954916806)
 
 <!-- # Ahmed Rafayat &ndash; Software Engineer -->
-
+For pdf version [click here](/portfolio)
 
 ## About me
 
@@ -23,14 +23,6 @@ path: "/portfolio"
 I am a software development during the day, but by night, I am a competitive FPS gamer, playing [Rainbow Six Siege](https://www.ubisoft.com/en-us/game/rainbow-six/siege) and consistently ranking among [top 1000-10000 players](https://r6.tracker.network/profile/pc/Arrow.-) in Asia.
 
 I also love table tennis, as a hobby & a competitive sport. I like watching anime and TV shows, mainly crime and detective shows. Lastly, I love coffee
-
-&nbsp;
-
-## Education
-
-**Islamic University of Technology, Gazipur, Dhaka**  
-B.Sc in Computer Science and Engineering  
-_2015 - 2019_
 
 &nbsp;
 
@@ -76,15 +68,24 @@ _2020_ | React, Redux, SEO, SSR
 Retail and e-commerce site built with React and Redux on the frontend and a PHP backend. Worked for 2 months under contract as the sole React developer.
 
 **PANPACIFIC PROPERTIES** | [panpacificproperties.com.bd](https://panpacificproperties.com.bd/)  
-_2020_
+_2020_ | Laravel
 A responsive, SEO optimized and mobile friendly website for a real estate startup. Freelanced from home.
 
 **EDUHIVE** | [Download from Google Play](https://shorturl.at/nERY5)  
-_December 2019 &ndash; January 2020_
-An e-learning app for bangladeshi students. It is available in the app store for both iOS and Android.
+_2019_ | ReactNative, MongoDB, Node
+An e-learning app for bangladeshi students. It is available in the app store for both iOS and Android. Worked from home on a few modules
 
+**APEX LEGENDS STATS TRACKER** | [github repo](https://github.com/ahmedrafayat/GameStats)  
+_2019_ | MongoDB, ExpressJS, ReactJS, NodeJS
+A website that allows users to track their in game statistics and also comment on other players profiles. Currently supports only 'Apex Legends'
 
+&nbsp;
 
+## Education
+
+**Islamic University of Technology, Gazipur, Dhaka**  
+B.Sc in Computer Science and Engineering  
+_2015 - 2019_
 
 &nbsp;
 

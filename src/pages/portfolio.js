@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 //import resume from "../rafayat-resume.pdf";
 
-const NotFoundPage = () => {
+const PortfolioPage = () => {
   const myexamplePdf = useStaticQuery(graphql`
     {
       pdf: file(name: { eq: "Rafayat resume" }) {
@@ -44,4 +44,4 @@ const onDocumentLoadSuccess = pdf => {
   alert("number of pages is", pdf);
 };
 
-export default NotFoundPage;
+export default PortfolioPage;
