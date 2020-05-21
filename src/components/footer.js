@@ -4,6 +4,7 @@ import Icon from "./icon";
 import { FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 
 import style from "../styles/menu.module.css";
+import iconStyle from "../styles/icon.module.css";
 import SocialIcons from "./SocialIcons";
 
 const githubLogo =
@@ -29,27 +30,37 @@ const Footer = ({ copyrights }) => (
     ) : (
       <>
         <>
-          <span className="footerCopyrights">© 2020 Ahmed Rafayat</span>
-          <span className="footerCopyrights">
-            <a href="https://github.com/ahmedrafayat">
-              <FaGithub size="1.4em"/>
+          <span>© 2020 Ahmed Rafayat</span>
+          <span
+            className="socialIconsSpan"
+            style={{ display: "flex", marginTop: "2 rem" }}
+            target="_blank"
+          >
+            <div style={{ flex: 5.5 }}></div>
+            <a
+              className="socialIcons"
+              href="https://github.com/ahmedrafayat"
+              target="_blank"
+            >
+              <FaGithub size="1.4em" />
             </a>
-            <a href="https://linkedin.com/in/ahmedrafayat/">
-              <FaLinkedin size="1.4em"/>
+            <a
+              className="socialIcons"
+              href="https://linkedin.com/in/ahmedrafayat/"
+              target="_blank"
+            >
+              <FaLinkedin size="1.4em" />
             </a>
-            <a href="https://stackoverflow.com/users/10464842/ahmed-rafayat/">
-              <FaStackOverflow size="1.4em"/>
+            <a
+              className="socialIcons"
+              href="https://stackoverflow.com/users/10464842/ahmed-rafayat/"
+              target="_blank"
+            >
+              <FaStackOverflow size="1.4em" />
             </a>
+            <div style={{ flex: 5.5 }}></div>
           </span>
-
-          {/* <span className="footerCopyrights">
-            Created by{" "}
-            <a href="https://github.com/ahmedrafayat" target="_blank">
-              ahmedrafayat
-            </a>
-          </span> */}
         </>
-        {/* <SocialIcons /> */}
       </>
     )}
   </footer>

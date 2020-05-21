@@ -308,13 +308,26 @@ hr {
 }
 
 footer {
-  font-size: 1rem;
+  /* font-size: 1rem;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 50px; */
+  display: flex;
+  flex-direction: column;
 
   @media (--phone) {
     display: flex;
     flex-direction: column;
+  }
+
+  .socialIconsSpan {
+    margin-top: 1rem;
+
+    .socialIcons {
+      flex: 1;
+      @media (--phone) {
+        flex: 1.6;
+      }
+    }
   }
 
   .footerCopyrights {
