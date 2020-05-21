@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SEO from "../components/SEO";
 //import resume from "../rafayat-resume.pdf";
 
 const PortfolioPage = () => {
