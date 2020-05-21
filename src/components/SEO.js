@@ -100,4 +100,4 @@ SEO.propTypes = {
   title: PropTypes.string,
 }
 
-export default SEO
+export default SEO;

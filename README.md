@@ -5,6 +5,7 @@ If the name wasn't obvious enough, this repo contains my personal website. It's 
 TO DO:
 
 - Good picture in portfolio.md 
+- Create an RSS feed
 - Make the blog dynamic
 - Make atleast two blog posts
 - Link the social accounts

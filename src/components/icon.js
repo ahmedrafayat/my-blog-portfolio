@@ -4,10 +4,15 @@ import PropTypes from 'prop-types'
 import style from '../styles/icon.module.css'
 
 const Icon = props => {
-  const { d, size = '1em', label, style: styles } = props
+  const { d, size = '1em', label, style: styles, redirectLink } = props
+
+  // if(typeof redirectLink === 'undefined') {
+  //   return
+  // }
+
 
   return (
-    <span className={style.root} style={styles} role="figure">
+    <span className={style.root} style={styles} role="figure" onClick={(e)=>onIconClicked(redirectLink)}>
       <svg
         version="1.1"
         width={size}
@@ -27,6 +32,15 @@ Icon.propTypes = {
   size: PropTypes.number,
   label: PropTypes.string,
   style: PropTypes.object,
+}
+
+const onIconClicked = (redirectLink) => {
+  if(typeof redirectLink === 'undefined') {
+    ;
+  }
+  else {
+    window.open(redirectLink, '_blank');
+  }
 }
 
 export default Icon

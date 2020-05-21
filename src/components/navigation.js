@@ -33,4 +33,4 @@ Navigation.propTypes = {
   previousLabel: PropTypes.string,
 }
 
-export default Navigation
+export default Navigation;
