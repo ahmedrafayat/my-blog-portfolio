@@ -1,41 +1,37 @@
-const postCssPresetEnv = require(`postcss-preset-env`);
-const postCSSNested = require("postcss-nested");
-const postCSSUrl = require("postcss-url");
-const postCSSImports = require("postcss-import");
-const cssnano = require("cssnano");
-const postCSSMixins = require("postcss-mixins");
+const postCssPresetEnv = require(`postcss-preset-env`)
+const postCSSNested = require('postcss-nested')
+const postCSSUrl = require('postcss-url')
+const postCSSImports = require('postcss-import')
+const cssnano = require('cssnano')
+const postCSSMixins = require('postcss-mixins')
 
 module.exports = {
   siteMetadata: {
-    title: `Rafa's Blog`,
+    title: 'Rafa\'s Blog',
     description: `Ahmed Rafayat's awesome website`,
-    copyrights: "",
+    copyrights: '',
     author: `ahmedrafayat`,
     logo: {
-      src: "",
-      alt: "",
+      src: '',
+      alt: '',
     },
-    logoText: "ahmedRafayat",
-    defaultTheme: "dark",
+    logoText: 'Rafa\'s Blog',
+    defaultTheme: 'dark',
     postsPerPage: 5,
     showMenuItems: 2,
-    menuMoreText: "Show more",
+    menuMoreText: 'Show more',
     mainMenu: [
       {
-        title: "About",
-        path: "/about",
-      },
-      // {
-      //   title: "Example",
-      //   path: "/example",
-      // },
-      {
-        title: "Blog",
-        path: "/",
+        title: 'About',
+        path: '/about',
       },
       {
-        title: "Resume",
-        path: "/resume",
+        title: 'Blog',
+        path: '/',
+      },
+      {
+        title: 'Resume',
+        path: '/resume',
       },
     ],
   },
@@ -79,12 +75,12 @@ module.exports = {
           postCSSMixins(),
           postCSSNested(),
           postCssPresetEnv({
-            importFrom: "src/styles/variables.css",
+            importFrom: 'src/styles/variables.css',
             stage: 1,
             preserve: false,
           }),
           cssnano({
-            preset: "default",
+            preset: 'default',
           }),
         ],
       },
@@ -96,7 +92,7 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-embed-video",
+            resolve: 'gatsby-remark-embed-video',
             options: {
               related: false,
               noIframeBorder: true,
@@ -112,7 +108,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
@@ -136,4 +132,4 @@ module.exports = {
       },
     },
   ],
-};
+}

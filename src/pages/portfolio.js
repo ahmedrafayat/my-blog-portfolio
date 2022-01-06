@@ -1,9 +1,8 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from "../components/layout";
-import SEO from "../components/SEO";
-//import resume from "../rafayat-resume.pdf";
+import Layout from '../components/layout'
+import SEO from '../components/SEO'
 
 const PortfolioPage = () => {
   const myexamplePdf = useStaticQuery(graphql`
@@ -14,19 +13,13 @@ const PortfolioPage = () => {
         publicURL
       }
     }
-  `);
+  `)
 
   return (
     <Layout>
       <SEO title="Resume" />
-      {/* <Document
-        file={myexamplePdf.pdf.publicURL}
-        onLoadError={error =>
-          alert("Error while loading document! " + error.message)
-        }
-        onLoadSuccess={onDocumentLoadSuccess}
-      /> */}
       <iframe
+        title='Resume PDF'
         src={myexamplePdf.pdf.publicURL}
         type="application/pdf"
         width="100%"
@@ -36,12 +29,7 @@ const PortfolioPage = () => {
         <p>Download here</p>
       </a>
     </Layout>
-  );
-};
+  )
+}
 
-const onDocumentLoadSuccess = pdf => {
-  debugger;
-  alert("number of pages is", pdf);
-};
-
-export default PortfolioPage;
+export default PortfolioPage
