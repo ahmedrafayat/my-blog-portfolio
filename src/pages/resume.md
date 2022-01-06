@@ -16,7 +16,7 @@ For pdf version [click here](/portfolio)
 - 2+ years of experience as a software engineer
 - Full stack engineer with a concentration on back-end technologies
 - Freelance developer with experience in 3++ projects
-- Always learning, Hardworking, and Higly competitive
+- Always learning, Hardworking, and Highly competitive
 
 #### What interests me
 
