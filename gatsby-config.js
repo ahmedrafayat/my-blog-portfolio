@@ -18,7 +18,7 @@ module.exports = {
     logoText: 'Rafa\'s Blog',
     defaultTheme: 'dark',
     postsPerPage: 5,
-    showMenuItems: 2,
+    showMenuItems: 3,
     menuMoreText: 'Show more',
     mainMenu: [
       {
