@@ -1,15 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import SEO from "../components/SEO";
-import Layout from "../components/layout";
-import Post from "../components/post";
-import Navigation from "../components/navigation";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import SEO from '../components/SEO'
+import Layout from '../components/layout'
+import Post from '../components/post'
+import Navigation from '../components/navigation'
 
 const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
   const {
     allMarkdownRemark: { edges: posts },
-  } = data;
+  } = data
+
+  console.log(posts)
 
   return (
     <>
@@ -27,9 +29,9 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               coverImage,
               excerpt,
               tags,
-            },
+            }, 
             fields,
-          } = node;
+          } = node
 
           return (
             <Post
@@ -43,7 +45,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               excerpt={excerpt || autoExcerpt}
               readingTime={fields.readingTime.text}
             />
-          );
+          )
         })}
 
         <Navigation
@@ -54,8 +56,8 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
         />
       </Layout>
     </>
-  );
-};
+  )
+}
 
 Index.propTypes = {
   data: PropTypes.object.isRequired,
@@ -63,7 +65,7 @@ Index.propTypes = {
     nextPagePath: PropTypes.string,
     previousPagePath: PropTypes.string,
   }),
-};
+}
 
 export const postsQuery = graphql`
   query($limit: Int!, $skip: Int!) {
@@ -101,6 +103,6 @@ export const postsQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default Index;
+export default Index

@@ -20,16 +20,25 @@ For pdf version [click here](/portfolio)
 
 #### What interests me
 
-I am a software development during the day, but by night, I am a competitive FPS gamer, playing [Rainbow Six Siege](https://www.ubisoft.com/en-us/game/rainbow-six/siege) and consistently ranking among [top 1000-10000 players](https://r6.tracker.network/profile/pc/Arrow.-) in Asia.
-
-I also love table tennis, as a hobby & a competitive sport. I like watching anime and TV shows, mainly crime and detective shows. Lastly, I love coffee
-
-&nbsp;
+- Gaming 
+- Table tennis
+- Hackintoshing
+- Anime
 
 ## Experience
 
+**Ideascale, Dhaka** | Software Engineer  
+_July 2020 &ndash; Present_
+
+- Working mostly with Typescript and React as a frontend developer
+- Was in charge of training around 25 developers in Typescript and React
+- From 2021, started leading a small team of engineers
+- Helped the company convert 80% of its legacy frontend code to React
+- Created major features such as Idea Submission, a Rich Text Editor and frontend code deployment with [microbundle](https://github.com/developit/microbundle) to name a few
+- Created a monorepo for React components which significantly increased development speed
+
 **IMpulse (BD) Ltd., Dhaka** | Software Engineer  
-_April 2018 &ndash; Present_
+_February 2020 &ndash; June 2020_
 
 - Developed major features, like notification feature using PL/PGsql in their [flagship ERP product](https://www.pulselinks.com/)
 - Updated legacy JS code to use more tidy and efficient ES6 syntax and less jquery
@@ -63,6 +72,18 @@ _January 2019 &ndash; November 2019_
 
 ## Personal & Freelance Projects
 
+**ShopCreate** | [shopcreate](https://shopcreate.online)
+_Oct 2021 - Dec 2021_ | Spring boot, NextJS, Docker, React Native, AWS EC2
+My latest project. I handled both the frontend, backend, deployment, and overall architecture.
+
+**AAOK** | [aaokapp.associatedasphalt.biz](https://bit.ly/3F6wVvf)
+_Nov 2020 - May 2021_ | Express, React, Docker, React Native
+An Employee wellbeing app. They can report any complaints or experiences. Designed the system architecture, backend and handled deployment
+
+**use-file-drop** | [use-file-drop](https://www.npmjs.com/package/use-file-drop)
+_Sept 2021_ | Typescript, React
+A react hook that makes implementing file drag and drop easy. Available as an npm package. Used by Ideascale.
+
 **Pluspoint Retail Website** | [pluspointfashion.com](https://www.pluspointfashion.com/)  
 _2020_ | React, Redux, SEO, SSR
 Retail and e-commerce site built with React and Redux on the frontend and a PHP backend. Worked for 2 months under contract as the sole React developer.
@@ -70,10 +91,6 @@ Retail and e-commerce site built with React and Redux on the frontend and a PHP 
 **PANPACIFIC PROPERTIES** | [panpacificproperties.com.bd](https://panpacificproperties.com.bd/)  
 _2020_ | Laravel
 A responsive, SEO optimized and mobile friendly website for a real estate startup. Freelanced from home.
-
-**EDUHIVE** | [Download from Google Play](https://shorturl.at/nERY5)  
-_2019_ | ReactNative, MongoDB, Node
-An e-learning app for bangladeshi students. It is available in the app store for both iOS and Android. Worked from home on a few modules
 
 **APEX LEGENDS STATS TRACKER** | [github repo](https://github.com/ahmedrafayat/GameStats)  
 _2019_ | MongoDB, ExpressJS, ReactJS, NodeJS
@@ -97,7 +114,7 @@ Sorted in order of expertise
 - DBMS &ndash; PostgreSQL, MongoDB, MySQL
 - Frameworks &ndash; React, Redux, Node.js, Express, Laravel, GatsbyJS, Django, .NET, Spring
 - Mobile development &ndash; React Native, Android with Java
-- Highly proficient in English, speaks Bangla
+- Proficient in English, speaks Bangla
 - Architectural Patterns &ndash; Model View Controller, Server Side Rendering, Microservices
 - Methodologies &ndash; Agile, Scrum, Cross-platform Development, Object-Oriented Programming, Rapid Application Development
 - Preferred OS for development &ndash; Manjaro, Ubuntu, macOS
@@ -107,9 +124,9 @@ Sorted in order of expertise
 ## What I want to work with
 
 - Javascript, Python, Java, PHP
-- ReactJS/GatsbyJS
+- React
 - NodeJS, Django, Spring
 - MongoDB, PostgreSQL
 - React Native
 - DevOps, CI/CD tools, AWS services
-- Linux development
+- Linux/Mac dev environment
