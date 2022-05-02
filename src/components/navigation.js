@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-import style from '../styles/navigation.module.css'
+import * as style from '../styles/navigation.module.css'
 
 const Navigation = ({ nextPath, previousPath, nextLabel, previousLabel }) =>
   previousPath || nextPath ? (
@@ -33,4 +33,4 @@ Navigation.propTypes = {
   previousLabel: PropTypes.string,
 }
 
-export default Navigation;
+export default Navigation

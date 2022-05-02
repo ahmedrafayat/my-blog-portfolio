@@ -92,13 +92,6 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-embed-video',
-            options: {
-              related: false,
-              noIframeBorder: true,
-            },
-          },
-          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
@@ -115,14 +108,13 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          `gatsby-remark-reading-time`,
         ],
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-hello-friend`,
+        name: `rafayat-blog`,
         short_name: `hello-friend`,
         start_url: `/`,
         background_color: `#292a2d`,

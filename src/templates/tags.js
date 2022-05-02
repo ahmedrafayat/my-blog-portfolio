@@ -69,16 +69,16 @@ Tags.propTypes = {
   pageContext: PropTypes.shape({
     nextPagePath: PropTypes.string,
     previousPagePath: PropTypes.string,
+    tag: PropTypes.string.isRequired,
   }),
 }
 
 export const postsQuery = graphql`
-  query($limit: Int!, $skip: Int!, $tag: String!) {
+  query TagPostsQuery ($tag: String!) {
     allMarkdownRemark(
       filter: { frontmatter: { tags: { in: [$tag] } } }
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
+      limit: 50
     ) {
       edges {
         node {
@@ -93,9 +93,7 @@ export const postsQuery = graphql`
             tags
             coverImage {
               childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 800)
               }
             }
           }
