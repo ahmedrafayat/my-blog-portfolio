@@ -12,10 +12,10 @@ exports.createPages = async ({ actions, graphql, getNodes }) => {
   const { createPage } = actions
   const allNodes = getNodes()
 
-  const result = await graphql(`
+  const markdownQuery = await graphql(`
     {
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: {fields: [frontmatter___date], order: DESC}
         limit: 1000
       ) {
         edges {
@@ -36,13 +36,13 @@ exports.createPages = async ({ actions, graphql, getNodes }) => {
       }
     }
   `)
-  if (result.errors) {
-    return Promise.reject(result.errors)
+  if (markdownQuery.errors) {
+    return Promise.reject(markdownQuery.errors)
   }
 
   const {
     allMarkdownRemark: { edges: markdownPages },
-  } = result.data
+  } = markdownQuery.data
 
   const sortedPages = markdownPages.sort((pageA, pageB) => {
     const typeA = getType(pageA.node)
