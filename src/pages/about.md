@@ -1,7 +1,5 @@
 ---
 title: "About"
-date: "2020-07-17"
-author: "Ahmed Rafayat"
 path: "/about"
 ---
 

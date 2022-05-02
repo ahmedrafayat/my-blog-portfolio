@@ -65,12 +65,12 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
         },
       ]
         .concat(
-          keywords.length > 0
-            ? {
+          keywords.length > 0 ?
+            {
                 name: `keywords`,
                 content: keywords.join(`, `),
-              }
-            : [],
+            } :
+            [],
         )
         .concat(meta)}
     />
@@ -100,4 +100,4 @@ SEO.propTypes = {
   title: PropTypes.string,
 }
 
-export default SEO;
+export default SEO

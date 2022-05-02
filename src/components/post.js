@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
-import Img from "gatsby-image";
-import Navigation from "./navigation";
-import { toKebabCase } from "../helpers";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
+import Navigation from './navigation'
+import { toKebabCase } from '../helpers'
 
-import style from "../styles/post.module.css";
+import * as style from '../styles/post.module.css'
 
 const Post = ({
   title,
@@ -18,12 +18,11 @@ const Post = ({
   html,
   previousPost,
   nextPost,
-  readingTime,
 }) => {
-  const previousPath = previousPost && previousPost.frontmatter.path;
-  const previousLabel = previousPost && previousPost.frontmatter.title;
-  const nextPath = nextPost && nextPost.frontmatter.path;
-  const nextLabel = nextPost && nextPost.frontmatter.title;
+  const previousPath = previousPost && previousPost.frontmatter.path
+  const previousLabel = previousPost && previousPost.frontmatter.title
+  const nextPath = nextPost && nextPost.frontmatter.path
+  const nextLabel = nextPost && nextPost.frontmatter.title
 
   return (
     <div className={style.post}>
@@ -32,7 +31,7 @@ const Post = ({
           {excerpt ? <Link to={path}>{title}</Link> : title}
         </h1>
         <div className={style.meta}>
-          {date} {author && <>— Written by {author}</>} {readingTime && (" | " + readingTime) }
+          {date} {author && <>— Written by {author}</>}
           {tags ? (
             <div className={style.tags}>
               {tags.map(tag => (
@@ -45,8 +44,8 @@ const Post = ({
         </div>
 
         {coverImage && (
-          <Img
-            fluid={coverImage.childImageSharp.fluid}
+          <GatsbyImage
+            image={getImage(coverImage)}
             className={style.coverImage}
           />
         )}
@@ -61,20 +60,20 @@ const Post = ({
         ) : (
           <>
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            {/^(\/blog\/).*/gi.test(path) &&
+            {/^(\/blog\/).*/gi.test(path) && (
               <Navigation
-              previousPath={previousPath}
-              previousLabel={previousLabel}
-              nextPath={nextPath}
-              nextLabel={nextLabel}
-            />
-            }
+                previousPath={previousPath}
+                previousLabel={previousLabel}
+                nextPath={nextPath}
+                nextLabel={nextLabel}
+              />
+            )}
           </>
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
 Post.propTypes = {
   title: PropTypes.string,
@@ -87,6 +86,6 @@ Post.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
   previousPost: PropTypes.object,
   nextPost: PropTypes.object,
-};
+}
 
-export default Post;
+export default Post

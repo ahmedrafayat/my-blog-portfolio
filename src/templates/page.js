@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-import SEO from "../components/SEO";
-import Layout from "../components/layout";
-import Post from "../components/post";
+import SEO from '../components/SEO'
+import Layout from '../components/layout'
+import Post from '../components/post'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const {
@@ -12,9 +12,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     excerpt: autoExcerpt,
     id,
     html,
-    fields
-  } = data.markdownRemark;
-  const { next, previous } = pageContext;
+  } = data.markdownRemark
+  const { next, previous } = pageContext
 
   return (
     <Layout>
@@ -30,13 +29,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         tags={tags}
         previousPost={previous}
         nextPost={next}
-        readingTime={fields.readingTime.text}
       />
     </Layout>
-  );
-};
+  )
+}
 
-export default BlogPostTemplate;
+export default BlogPostTemplate
 
 BlogPostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
@@ -44,7 +42,7 @@ BlogPostTemplate.propTypes = {
     next: PropTypes.object,
     previous: PropTypes.object,
   }),
-};
+}
 
 export const pageQuery = graphql`
   query($path: String) {
@@ -58,20 +56,13 @@ export const pageQuery = graphql`
         tags
         coverImage {
           childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 800)
           }
         }
       }
       id
       html
       excerpt
-      fields {
-        readingTime {
-          text
-        }
-      }
     }
   }
-`;
+`

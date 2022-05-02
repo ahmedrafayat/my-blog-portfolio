@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import style from '../styles/icon.module.css'
+import * as style from '../styles/icon.module.css'
 
 const Icon = props => {
   const { d, size = '1em', label, style: styles, redirectLink } = props
@@ -12,7 +12,7 @@ const Icon = props => {
 
 
   return (
-    <span className={style.root} style={styles} role="figure" onClick={(e)=>onIconClicked(redirectLink)}>
+    <span className={style.root} style={styles} role="figure" onClick={e=>onIconClicked(redirectLink)}>
       <svg
         version="1.1"
         width={size}
@@ -34,12 +34,12 @@ Icon.propTypes = {
   style: PropTypes.object,
 }
 
-const onIconClicked = (redirectLink) => {
+const onIconClicked = redirectLink => {
   if(typeof redirectLink === 'undefined') {
     ;
   }
   else {
-    window.open(redirectLink, '_blank');
+    window.open(redirectLink, '_blank')
   }
 }
 
