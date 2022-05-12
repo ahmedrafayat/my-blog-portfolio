@@ -6,13 +6,8 @@ import * as style from '../styles/icon.module.css'
 const Icon = props => {
   const { d, size = '1em', label, style: styles, redirectLink } = props
 
-  // if(typeof redirectLink === 'undefined') {
-  //   return
-  // }
-
-
   return (
-    <span className={style.root} style={styles} role="figure" onClick={e=>onIconClicked(redirectLink)}>
+    <a className={style.root} style={styles} role="figure" href={redirectLink}>
       <svg
         version="1.1"
         width={size}
@@ -23,7 +18,7 @@ const Icon = props => {
         <path d={d} className={style.icon} />
       </svg>
       {label && <span className={style.label}>{label}</span>}
-    </span>
+    </a>
   )
 }
 

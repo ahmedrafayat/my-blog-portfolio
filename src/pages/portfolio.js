@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 
 const PortfolioPage = () => {
   const myexamplePdf = useStaticQuery(graphql`
@@ -17,7 +17,7 @@ const PortfolioPage = () => {
 
   return (
     <Layout>
-      <SEO title="Resume" />
+      <Seo title="Resume" />
       <iframe
         title='Resume PDF'
         src={myexamplePdf.pdf.publicURL}

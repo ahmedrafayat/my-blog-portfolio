@@ -1,4 +1,4 @@
-const { forEach, uniq, filter, not, isNil, flatMap } = require('rambdax')
+const { uniq, chain } = require('rambdax')
 const path = require('path')
 const { toKebabCase } = require('./src/helpers')
 
@@ -58,7 +58,7 @@ exports.createPages = async ({ actions, graphql, getNodes }) => {
   )
 
   // Create each markdown page and post
-  forEach(({ node }, index) => {
+  sortedPages.forEach(({node}, index) => {
     const previous = index === 0 ? null : sortedPages[index - 1].node
     const next =
       index === sortedPages.length - 1 ? null : sortedPages[index + 1].node
@@ -75,15 +75,15 @@ exports.createPages = async ({ actions, graphql, getNodes }) => {
         previous: isPreviousSameType ? previous : null,
       },
     })
-  }, sortedPages)
+  })
 
   // Create tag pages
-  const tags = filter(
-    tag => not(isNil(tag)),
-    uniq(flatMap(post => post.frontmatter.tags, posts)),
-  )
+  console.log("🚀 ~ file: gatsby-node.js ~ line 85 ~ exports.createPages= ~ tags", uniq(chain((post) => post.frontmatter.tags, posts)))
+  const tags = uniq(chain((post) => post.frontmatter.tags, posts)).filter(
+    (tag) => !tag.trim()
+  );
 
-  forEach(tag => {
+  tags.forEach(tag => {
     createPage({
       path: `/tag/${toKebabCase(tag)}`,
       component: tagsTemplate,
@@ -91,7 +91,7 @@ exports.createPages = async ({ actions, graphql, getNodes }) => {
         tag,
       },
     })
-  }, tags)
+  })
 
   return {
     sortedPages,
