@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 
-import SEO from '../components/SEO'
-import Layout from '../components/layout'
-import Post from '../components/post'
+import Seo from '../components/SEO';
+import Layout from '../components/layout';
+import Post from '../components/post';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const {
@@ -12,12 +12,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     excerpt: autoExcerpt,
     id,
     html,
-  } = data.markdownRemark
-  const { next, previous } = pageContext
+  } = data.markdownRemark;
+  const { next, previous } = pageContext;
 
   return (
     <Layout>
-      <SEO title={title} description={excerpt || autoExcerpt} />
+      <Seo title={title} description={excerpt || autoExcerpt} />
       <Post
         key={id}
         title={title}
@@ -31,10 +31,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         nextPost={next}
       />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 BlogPostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
@@ -42,10 +42,10 @@ BlogPostTemplate.propTypes = {
     next: PropTypes.object,
     previous: PropTypes.object,
   }),
-}
+};
 
 export const pageQuery = graphql`
-  query($path: String) {
+  query ($path: String) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         title
@@ -65,4 +65,4 @@ export const pageQuery = graphql`
       excerpt
     }
   }
-`
+`;
