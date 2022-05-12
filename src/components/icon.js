@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import * as style from '../styles/icon.module.css'
+import * as style from '../styles/icon.module.css';
 
-const Icon = props => {
-  const { d, size = '1em', label, style: styles, redirectLink } = props
+const Icon = (props) => {
+  const { d, size = '1em', label, style: styles, redirectLink } = props;
 
   return (
-    <a className={style.root} style={styles} role="figure" href={redirectLink}>
+    <a className={style.root} style={styles} href={redirectLink}>
       <svg
         version="1.1"
         width={size}
@@ -19,23 +19,15 @@ const Icon = props => {
       </svg>
       {label && <span className={style.label}>{label}</span>}
     </a>
-  )
-}
+  );
+};
 
 Icon.propTypes = {
   d: PropTypes.string,
   size: PropTypes.number,
   label: PropTypes.string,
   style: PropTypes.object,
-}
+  redirectLink: PropTypes.string.isRequired,
+};
 
-const onIconClicked = redirectLink => {
-  if(typeof redirectLink === 'undefined') {
-    ;
-  }
-  else {
-    window.open(redirectLink, '_blank')
-  }
-}
-
-export default Icon
+export default Icon;

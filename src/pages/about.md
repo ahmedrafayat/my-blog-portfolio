@@ -1,6 +1,6 @@
 ---
-title: "About"
-path: "/about"
+title: 'About'
+path: '/about'
 ---
 
 ## Hi there

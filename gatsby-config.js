@@ -1,13 +1,13 @@
-const postCssPresetEnv = require(`postcss-preset-env`)
-const postCSSNested = require('postcss-nested')
-const postCSSUrl = require('postcss-url')
-const postCSSImports = require('postcss-import')
-const cssnano = require('cssnano')
-const postCSSMixins = require('postcss-mixins')
+const postCssPresetEnv = require(`postcss-preset-env`);
+const postCSSNested = require('postcss-nested');
+const postCSSUrl = require('postcss-url');
+const postCSSImports = require('postcss-import');
+const cssnano = require('cssnano');
+const postCSSMixins = require('postcss-mixins');
 
 module.exports = {
   siteMetadata: {
-    title: 'Rafa\'s Blog',
+    title: "Rafa's Blog",
     description: `Ahmed Rafayat's awesome website`,
     copyrights: '',
     author: `ahmedrafayat`,
@@ -15,7 +15,7 @@ module.exports = {
       src: '',
       alt: '',
     },
-    logoText: 'Rafa\'s Blog',
+    logoText: "Rafa's Blog",
     defaultTheme: 'dark',
     postsPerPage: 5,
     showMenuItems: 3,
@@ -124,4 +124,4 @@ module.exports = {
       },
     },
   ],
-}
+};

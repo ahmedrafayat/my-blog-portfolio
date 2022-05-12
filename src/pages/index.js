@@ -1,20 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Seo from '../components/SEO'
-import Layout from '../components/layout'
-import Post from '../components/post'
-import Navigation from '../components/navigation'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Seo from '../components/SEO';
+import Layout from '../components/layout';
+import Post from '../components/post';
+import Navigation from '../components/navigation';
 
-const Index = props => {
+const Index = (props) => {
   const {
     data,
     pageContext: { nextPagePath, previousPagePath },
-  } = props
+  } = props;
 
   const {
     allMarkdownRemark: { edges: posts },
-  } = data
+  } = data;
 
   return (
     <>
@@ -33,7 +33,7 @@ const Index = props => {
               excerpt,
               tags,
             },
-          } = node
+          } = node;
 
           return (
             <Post
@@ -46,7 +46,7 @@ const Index = props => {
               tags={tags}
               excerpt={excerpt || autoExcerpt}
             />
-          )
+          );
         })}
 
         <Navigation
@@ -57,8 +57,8 @@ const Index = props => {
         />
       </Layout>
     </>
-  )
-}
+  );
+};
 
 Index.propTypes = {
   data: PropTypes.object.isRequired,
@@ -66,13 +66,16 @@ Index.propTypes = {
     nextPagePath: PropTypes.string,
     previousPagePath: PropTypes.string,
   }),
-}
+};
 
 export const postsQuery = graphql`
   query PostsQuery {
     allMarkdownRemark(
-      filter: {frontmatter: {path: {regex: "/blog/"}}, fileAbsolutePath: {regex: "//posts//"}}
-      sort: {fields: [frontmatter___date], order: DESC}
+      filter: {
+        frontmatter: { path: { regex: "/blog/" } }
+        fileAbsolutePath: { regex: "//posts//" }
+      }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
@@ -95,6 +98,6 @@ export const postsQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Index
+export default Index;

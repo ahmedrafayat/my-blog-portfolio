@@ -1,14 +1,15 @@
 ---
-title: "Ahmed Rafayat - Software Engineer"
-date: "2020-05-17"
-author: "Ahmed Rafayat"
-path: "/resume"
+title: 'Ahmed Rafayat - Software Engineer'
+date: '2020-05-17'
+author: 'Ahmed Rafayat'
+path: '/resume'
 ---
 
 > [ahmed.rafayat97@gmail.com](mailto:ahmed.rafayat97@gmail.com) |
 > [+8801954916806](tel:+8801954916806)
 
 <!-- # Ahmed Rafayat &ndash; Software Engineer -->
+
 For pdf version [click here](/portfolio)
 
 ## About me
@@ -20,7 +21,7 @@ For pdf version [click here](/portfolio)
 
 #### What interests me
 
-- Gaming 
+- Gaming
 - Table tennis
 - Hackintoshing
 - Anime
