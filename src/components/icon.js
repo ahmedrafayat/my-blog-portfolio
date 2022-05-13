@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import * as style from '../styles/icon.module.css';
 
 const Icon = (props) => {
-  const { d, size = '1em', label, style: styles, redirectLink } = props;
+  const { d, size = '1em', label, style: styles } = props;
 
   return (
-    <a className={style.root} style={styles} href={redirectLink}>
+    <span className={style.root} style={styles}>
       <svg
         version="1.1"
         width={size}
@@ -18,7 +18,7 @@ const Icon = (props) => {
         <path d={d} className={style.icon} />
       </svg>
       {label && <span className={style.label}>{label}</span>}
-    </a>
+    </span>
   );
 };
 
@@ -27,7 +27,6 @@ Icon.propTypes = {
   size: PropTypes.number,
   label: PropTypes.string,
   style: PropTypes.object,
-  redirectLink: PropTypes.string.isRequired,
 };
 
 export default Icon;

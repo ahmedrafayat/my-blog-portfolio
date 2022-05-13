@@ -78,12 +78,8 @@ exports.createPages = async ({ actions, graphql, getNodes }) => {
   });
 
   // Create tag pages
-  console.log(
-    '🚀 ~ file: gatsby-node.js ~ line 85 ~ exports.createPages= ~ tags',
-    uniq(chain((post) => post.frontmatter.tags, posts))
-  );
   const tags = uniq(chain((post) => post.frontmatter.tags, posts)).filter(
-    (tag) => !tag.trim()
+    (tag) => !!tag
   );
 
   tags.forEach((tag) => {
