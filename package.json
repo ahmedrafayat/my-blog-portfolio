@@ -22,7 +22,8 @@
     "clean": "gatsby clean",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "lint:debug": "eslint . --debug"
   },
   "dependencies": {
     "gatsby": "^4.13.1",
